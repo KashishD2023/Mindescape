@@ -1,38 +1,89 @@
-.App {
+/* App.css */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2.5rem; /* or larger if needed */
+  color: #ff4fc1;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.controls {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+select {
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px; /* you can increase this if needed */
+  font-size: 1rem;
+  color:black;
+  background-color: white;
+}
+
+
+button {
+  background-color: #ff4fc1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-box {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  margin: 10px 0;
+}
+
+.message.user {
+  color: #00bfff;
+}
+
+.message.bot {
+  color: #ffffff;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  color: black;              /* Text color */
+  background-color: white;  /* Background color */
+}
+
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
 }
